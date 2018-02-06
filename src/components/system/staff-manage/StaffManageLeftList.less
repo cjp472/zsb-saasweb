@@ -1,0 +1,53 @@
+/*引入less定义的方法*/
+@import '../../common/less/common.less';
+
+.all{
+    width : 100%;
+    height : 100%;
+    padding : 10px 0 20px 20px;
+}
+.block_title{
+    height:50px;
+    width:100%;
+    line-height: 50px;
+    background-color: #5d9cec;
+    color:#fff;
+    font-size: 1.16rem;
+    padding:0 10px;
+    .borderRadius(5px,5px,0,0);
+}
+:global{
+    .zj_staff_manage_organ_tree .ant-tree li a{
+        width:100%;
+        line-height: 205%;
+        padding:0;
+        background-color: #fff !important;
+    }
+    .zj_staff_manage_organ_tree .ant-tree li a.ant-tree-node-selected{
+        background-color: #fff !important;
+    }
+    .zj_staff_manage_organ_tree .ant-tree li .ant-tree-node-content-wrapper{
+        padding : 3px 0;
+    }
+}
+
+.orgListTypeOne,.orgListTypeTwo{
+    overflow:auto;
+    border:1px solid #ddd;
+    padding:16px 30px 30px 30px;
+    .borderRadius(0,0,5px,5px);
+    .transition(all 1s);
+    .scrollbar();
+}
+.orgListTypeOne{
+    height:589px;
+}
+.orgListTypeTwo{
+    height:669px;
+}
+.deptName{
+    cursor:default;
+}
+.icon{
+    color:#5d9cec;
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<!--STATUS OK-->
+<html>
+	<head>
+		<meta name="renderer" content="webkit|ie-comp|ie-stand" />
+		<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge">
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta content="always" name="referrer">
+		<meta name="theme-color" content="#88C70A">
+		<title>招生宝</title>
+		<link rel="stylesheet" href="index.css" />
+
+		<!--
+			描述：saas管理后台的自定义图标
+		-->
+		<link rel="stylesheet" href="//at.alicdn.com/t/font_231792_ee6l17mv2z4fs9k9.css" />
+
+		<!--
+			描述：(对应iconfont里saas10月更新项目)
+		-->
+		<link rel="stylesheet" href="//at.alicdn.com/t/font_466393_ybchs11hy0gam7vi.css" />
+
+		<!--
+			描述：(对应微官网界面)
+		-->
+		<link rel="stylesheet" href="//at.alicdn.com/t/font_278004_c8c20c5jd5tgldi.css"></link>
+
+		<style>
+    	/*商桥聊天的样式修改*/
+			#qiao-icon-wrap .qiao-icon-head {
+				overflow: inherit!important;
+			}
+
+			/*缓冲页面的样式*/
+			#page_loading_9232 {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100vw;
+				height: 100vh;
+				z-index: 99999;
+			}
+
+			#page_loading_9232 .page_loading_cont {
+		        margin: 0 auto;
+			    margin-top: 20%;
+			    text-align: center;
+			    font-size: 14px;
+			    color: #666666;
+			    width: 275px;
+			}
+
+			#page_loading_9232 .page_loading_text {
+		        height: 32px;
+			    line-height: 32px;
+			}
+
+			#page_loading_9232 .page_loading_icon {
+			    -webkit-transition-property: -webkit-transform;
+			    -webkit-transition-duration: 1s;
+			    -moz-transition-property: -moz-transform;
+			    -moz-transition-duration: 1s;
+			    -webkit-animation: loading_rotate 3s linear infinite;
+			    -moz-animation: loading_rotate 3s linear infinite;
+			    -o-animation: loading_rotate 3s linear infinite;
+			    animation: loading_rotate 3s linear infinite;
+			    color: #999999;
+			}
+
+			@-webkit-keyframes loading_rotate{
+				from{-webkit-transform: rotate(0deg)}
+			    to{-webkit-transform: rotate(360deg)}
+			}
+			@-moz-keyframes loading_rotate{
+				from{-moz-transform: rotate(0deg)}
+			    to{-moz-transform: rotate(359deg)}
+			}
+			@-o-keyframes loading_rotate{
+				from{-o-transform: rotate(0deg)}
+			    to{-o-transform: rotate(359deg)}
+			}
+			@keyframes loading_rotate{
+				from{transform: rotate(0deg)}
+			    to{transform: rotate(359deg)}
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div id="root"></div>
+
+		<!--
+        	loading加载页
+        -->
+		<div id="page_loading_9232">
+			<div class="page_loading_cont">
+				<img class="page_loading_icon" src="http://img.ishanshan.com/gimg/img/fe8cb8e8412c0286e5a4b9186146d377" />
+				<div class="page_loading_text">页面正在火速加载中</div>
+			</div>
+		</div>
+
+
+		<script type="text/javascript">
+			window._resource_load_log = true;
+			/*关闭loading加载页 */
+
+			if(window._resource_load_log) {
+				console.info('页面加载开始:', new Date().getTime());
+				window._begin_loading_time = new Date().getTime();
+			}
+
+			window.closeLoadingPageShow = function() {
+				document.getElementById('page_loading_9232').style.display = 'none';
+
+				if(window._resource_load_log) {
+					console.info('页面加载结束:', new Date().getTime());
+					window._end_loading_time = new Date().getTime();
+					console.info('loading_time:', window._end_loading_time - window._begin_loading_time);
+				}
+			}
+		</script>
+
+		<script src="index.js"></script>
+    <script src="http://www.ishanshan.com/resources/js/html2canvas.min.js"></script>
+
+  </body>
+</html>
+
+<script type="text/javascript">
+  var _mapNewLng = '';
+  var _mapNewLat = '';
+  var _mapNoChange = true;
+  var _mapMoveAfter = false;
+  function loadJScript(src) {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = src;
+    document.body.appendChild(script);
+  }
+  //回调初始化默认北京
+  function init() {
+    var map = new BMap.Map("base_map");
+    var point = new BMap.Point(116.404, 39.915);
+    map.centerAndZoom(point, 13);
+  }
+  //添加控件和比例尺
+  function scaleControl(map) {
+    var top_left_control = new BMap.ScaleControl({ anchor: BMAP_ANCHOR_TOP_LEFT });
+    var top_left_navigation = new BMap.NavigationControl();
+    function add_control() {
+      map.addControl(top_left_control);
+      map.addControl(top_left_navigation);
+    }
+    add_control();
+  }
+  function moveToLngLat(map, point) {
+    var marker = new BMap.Marker(point);
+    marker.enableDragging();
+    function getAttr() {
+      var p = marker.getPosition();
+      _mapNewLng = p.lng;
+      _mapNewLat = p.lat;
+      _mapMoveAfter = true;
+    }
+    marker.addEventListener("mouseup", getAttr);
+    map.addOverlay(marker);
+  }
+  //根据经纬度定位
+  function theLocation(lng, lat) {
+    var map = new BMap.Map("base_map");
+    var new_point = new BMap.Point(lng, lat);
+    map.centerAndZoom(new_point, 19);
+    scaleControl(map);
+    moveToLngLat(map, new_point);
+    map.panTo(new_point);
+  }
+  //根据地址进行解析定位
+  function addressParse(province, address) {
+    var map = new BMap.Map("base_map");
+    var point = new BMap.Point();
+    scaleControl(map);
+    var myGeo = new BMap.Geocoder();
+    myGeo.getPoint(province + address, function (point) {
+      if (point) {
+        moveToLngLat(map, point);
+        map.centerAndZoom(point, address.length > 0 ? 17 : 13);
+        _mapNewLng = 0;
+        _mapNewLat = 0;
+        _mapMoveAfter = false;
+      } else {
+        alert("您选择地址没有解析到结果!");
+      }
+    }, "");
+  }
+</script>
+
+<!--
+	百度商桥交流代码
+-->
+<script src="http://www.ishanshan.com/thinknode/static/js/baidu/shangqiao.js"></script>
+
+

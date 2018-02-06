@@ -1,0 +1,48 @@
+@import '../../lib.less';
+
+.saas_bread_crumb_cont {
+    margin: 10px 0;
+}
+
+.bread_href {
+    cursor: pointer;
+}
+.bread_href:hover {
+    color: @zsb-main-color;
+}
+
+.bread_default {
+    cursor: default;
+}
+
+.saas_bread_crumb {
+  list-style: none;
+  overflow: hidden;
+}
+.saas_bread_crumb::before{
+    float: left;
+    content : '';
+    width : 6px;
+    height : 16px;
+    background : @zsb-main-color;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+.saas_bread_crumb li {
+  height: 0.8rem;
+  line-height: 0.8rem;
+  font-size: 1rem;
+  float: left;
+  text-decoration: none;
+  color: #999;
+  position: relative;
+  z-index: 1;
+}
+.saas_bread_crumb li a {
+    color: #666;
+    font-size: 14px;
+    margin-right : 10px;
+}
+.saas_bread_crumb li span{
+    margin-right : 10px;
+}

@@ -1,0 +1,326 @@
+.game_general_base {
+    background-color: white;
+    min-height: 100%;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+.labeGroup {
+    padding: 8px;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: baseline;
+}
+
+.labeTitle {
+    height: 100%;
+    color: #000;
+    font-weight: 600;
+    margin-right: 10px;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.labelChild {
+    margin-right: 14px;
+    word-break: keep-all;
+    white-space: nowrap;
+    display: inline-block;
+    line-height: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0 5px;
+    height: 22px;
+    line-height: 22px;
+}
+
+.activity_label {
+    padding: 8px 0;
+}
+
+.labelAll {
+    cursor: pointer;
+    margin-right: 14px;
+    white-space: nowrap;
+    font-size: 14px;
+    padding: 0 5px;
+    height: 22px;
+    line-height: 22px;
+}
+
+.labeContent {
+    width: calc(~'100% - 45px - 40px');
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.active_main {
+    background: #ececec;
+    margin-right: 5px;
+    border-radius: 5px;
+    min-height: 635px;
+    padding-bottom: 60px;
+}
+
+.label_operation {
+    width: 4%;
+}
+
+.active_clearance {
+    height: 4px;
+    clear: both;
+    background: #5D9CEC;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.activity_div {
+    /*  width: calc((100% - 250px) / 4); */
+    background: #e9eaed;
+    margin-left: 20px;
+    margin-right: 10px;
+    float: left;
+    margin-bottom: 30px;
+    height: 300px;
+    width: 200px;
+    position: relative;
+    border-radius: 10px;
+    opacity: 1;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.activity_div:hover {
+    box-shadow: 10px 10px 15px 2px #c5c5c5;
+}
+
+.activity_div:hover .codeModalActive {
+    opacity: 1;
+}
+
+.activity_div_img {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.general_use_number {
+    position: absolute;
+    height: 26px;
+    background-color: black;
+    width: 100%;
+    bottom: 100px;
+    opacity: 0.6;
+}
+
+.general_game_acitity_list {
+    clear: both;
+    min-height: 400px;
+    padding-top: 20px;
+}
+
+.Oractivity_div_open_status {
+    font-size: 14px;
+    margin-left: 10px;
+    line-height: 28px;
+    color: #FF928A;
+    cursor: default;
+}
+
+.general_use_number_p_left {
+    position: absolute;
+    bottom: 100px;
+    color: white;
+    margin-left: 10px;
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.general_use_number_p_right {
+    float: left;
+    bottom: 100px;
+    color: #2db7f5;
+    font-size: 12px;
+    line-height: 26px;
+}
+
+.activity_div_botton_div {
+    height: 100px;
+    background: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.activity_div_title {
+    font-size: 14px;
+    text-align: left;
+    padding: 5px 0px 0px 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-right: 10px;
+    margin-left: 10px;
+    text-overflow: ellipsis;
+    color: #666;
+    cursor: default;
+}
+
+.active_footer {
+    text-align: center;
+}
+
+.general_custom {
+    clear: both;
+    font-size: 14px;
+    margin-right: 40px;
+}
+
+.activity_div_sub_title {
+    font-size: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 20px;
+    margin-bottom: 13px;
+    overflow: hidden;
+    margin-top: 2px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #999;
+    cursor: default;
+}
+
+.codeModalActive {
+    opacity: 0;
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    border-radius: 5px;
+    top: 0;
+    -webkit-transition: opacity ease-in-out .4s;
+    -moz-transition: opacity ease-in-out .4s;
+    -o-transition: opacity ease-in-out .4s;
+    transition: opacity ease-in-out .4s;
+}
+
+.codeUrlActive {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 19px;
+    width: 140px;
+    height: 140px;
+    padding: 5px;
+    background: #fff;
+    text-align: center;
+}
+
+.searchContent {
+    height: 46px;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+}
+
+.codeName {
+    position: absolute;
+    top: 58px;
+    left: 58px;
+    height: 30px;
+    width: 30px;
+    background: #fff;
+    line-height: 1;
+    color: #5d9cec;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 700;
+    padding: 4px 0px;
+    font-size: 12px;
+}
+
+[data-name='microActivity'] {
+    overflow: hidden;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.zyf_micro_activity_search_ontent {
+    height: 35px;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top: 6px;
+}
+
+.zyf_micro_activity_search_item {
+    margin-right: 10px;
+}
+
+.zyf_micro_activity_search_button_group {
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    flex-wrap: nowrap;
+}
+
+.zyf_micro_activity_search_button_group button {
+    margin-right: 10px;
+}
+
+.zyf_micro_activity_check_or_pickup_more_tag {
+    position: relative;
+    height: 25px;
+    margin: 0 auto;
+    width: 80px;
+    background: #fff;
+    cursor: pointer;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.zyf_micro_activity_check_or_pickup_more_tag>div {
+    height: inherit;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.zyf_micro_activity_check_or_pickup_more_tag_font {
+    margin-right: 3px;
+}
+
+.zyf_micro_activity_check_more_tag {
+    position: absolute;
+    font-size: 14px;
+    right: 13px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.zyf_micro_activity_pickup_more_tag {
+    position: absolute;
+    font-size: 12px;
+    right: 13px;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.gameOractivity_div_select_button {
+    margin-right: 10px;
+    float: right;
+}

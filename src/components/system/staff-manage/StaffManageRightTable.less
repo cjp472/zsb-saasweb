@@ -1,0 +1,61 @@
+/*引入less定义的方法*/
+@import '../../common/less/common.less';
+:global{
+    /*右侧列表*/
+    .zj_staff_manage_right_table .ant-table .ant-table-content .ant-table-body  tr{
+		border-color : #ddd;
+		height : 50px;
+	}
+	.zj_staff_manage_right_table .ant-table .ant-table-content .ant-table-body  tr:nth-child(2n){
+		background : #f9f9f9;
+	}
+	.zj_staff_manage_right_table .ant-table .ant-table-content .ant-table-body  tr:hover{
+		background : #DFEBFB;
+	}
+	.zj_staff_manage_right_table .ant-table .ant-table-content .ant-table-body  tr > td{
+		border-color : #ddd;
+		text-align : center;
+		line-height : 16px;
+		padding : 0 10px;
+		position : relative;
+	}
+	.zj_staff_manage_right_table .ant-table .ant-table-content .ant-table-body  tr > td > a,
+    .zj_staff_manage_right_table .ant-table .ant-table-content .ant-table-body  tr > td > span{
+		position : absolute;
+		top : 18px;
+		left : 10px;
+		display : inline-block;
+		width : calc(~'100% - 20px');
+		.textOverflow(ellipsis);
+		white-space : nowrap;
+		overflow : hidden;
+	}
+	.zj_staff_manage_right_table .ant-table .ant-table-thead > tr > th{
+		padding : 14px 8px;
+		border-color : #ddd;
+		text-align : center;
+	}
+	.zj_staff_manage_right_table .ant-table .ant-table-thead > tr > th span{
+		color : #666;
+	}
+	.zj_staff_manage_right_table .ant-table-bordered .ant-table-thead>tr:nth-child(1)>th{
+		background : #f1f1f1;
+	}
+	.zj_staff_manage_right_table .ant-table .ant-table-content .ant-table-thead .ant-table-selection-column,
+	.zj_staff_manage_right_table .ant-table .ant-table-content .ant-table-body .ant-table-selection-column{
+		width : 50px;
+		min-width : 50px;
+		height : 50px;
+		padding : 14px 8px;
+	}
+}
+
+
+/*Table*/
+.tableBtn{
+    position:relative;
+    height:30px;
+    line-height: 30px;
+    margin:0 1px 10px 2px;
+    font-size: 14px;
+}

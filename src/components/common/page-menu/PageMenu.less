@@ -1,0 +1,48 @@
+:global {
+    .common_page_menu_cont {
+        width: 100%;
+    }
+
+    .common_page_menu_cont .ant-menu-vertical .ant-menu-item .common_item_menu_text {
+        display: none;
+    }
+
+    .common_page_menu_cont .ant-menu-vertical .ant-menu-submenu-title .common_sub_menu_text {
+        display: none;
+    }
+
+    .common_page_menu_cont .ant-menu-submenu-vertical .ant-menu-item .common_item_menu_text {
+        display: inline-block;
+    }
+
+    /*↓↓↓↓↓↓↓↓↓↓↓↓↓侧边菜单栏-滚动条↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+    /*定义滚动条宽高及背景，宽高分别对应横竖滚动条的尺寸*/
+    .common_page_menu_cont::-webkit-scrollbar {
+        background-color: transparent!important;
+        border-radius: 1px;
+        width: 3px;
+        height: 3px;
+        margin-right: 1px;
+        right: 2px;
+    }
+
+    /*定义滑块，内阴影及圆角*/
+    .common_page_menu_cont::-webkit-scrollbar-thumb {
+        background-color: rgba(88,100,118,0.4);;
+        border-radius: 1px;
+    }
+    /*滚动条按钮*/
+    .common_page_menu_cont::-webkit-scrollbar-button {
+        height: 0;
+    }
+    /*定义滚动条的轨道，内阴影及圆角*/
+    .common_page_menu_cont::-webkit-scrollbar-track {
+        background-color: rgba(0,0,0,0.1);
+        border-radius: 1px;
+    }
+    /*↑↑↑↑↑↑↑↑↑↑↑↑↑内容栏-滚动条↑↑↑↑↑↑↑↑↑↑↑↑↑*/
+}
+
+.page_menu_cont {
+    position: relative;
+}
